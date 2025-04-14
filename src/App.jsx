@@ -44,6 +44,12 @@ function App() {
 
   const handleAddHabit = (e) => {
     e.preventDefault();
+
+    if (newHabitTitle === "") {
+      alert("Isi nama habit!")
+      return;
+    } 
+
     const newHabit = {
       Title: newHabitTitle,
       Desc: newHabitDesc,
